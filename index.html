@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>오늘의 할 일</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <div class="todo-container">
+
+    <div class="todo-card">
+
+      <!-- 제목 -->
+      <div class="header">
+
+        <span class="category">MY TODO</span>
+
+        <h1 id="title">오늘의 할 일</h1>
+
+        <p id="message">
+          작은 실천이 큰 변화를 만듭니다.
+        </p>
+
+      </div>
+
+      <!-- 할 일 개수 -->
+      <div class="count-box">
+
+        <div class="count-item">
+
+          <span class="count-number" id="totalCount">
+            0
+          </span>
+
+          <span class="count-label">
+            전체 할 일
+          </span>
+
+        </div>
+
+        <div class="count-item completed-box">
+
+          <span class="count-number" id="completedCount">
+            0
+          </span>
+
+          <span class="count-label">
+            완료한 일
+          </span>
+
+        </div>
+
+      </div>
+
+      <!-- 입력 영역 -->
+      <div class="input-area">
+
+        <input
+          id="todoInput"
+          type="text"
+          placeholder="새로운 할 일을 입력하세요"
+        >
+
+        <button
+          id="addButton"
+          onclick="addTodo()"
+        >
+          +
+        </button>
+
+      </div>
+
+      <!-- 목록 -->
+      <h2 class="list-title">
+        오늘의 목록
+      </h2>
+
+      <ul id="todoList"></ul>
+
+      <!-- 하단 문구 -->
+      <p class="footer">
+        오늘도 목표를 향해 한 걸음!
+      </p>
+
+    </div>
+
+  </div>
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

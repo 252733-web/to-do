@@ -1,0 +1,309 @@
+
+/* 기본 설정 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  background: linear-gradient(
+    135deg,
+    #f0edff,
+    #e8f0ff
+  );
+
+  min-height: 100vh;
+}
+
+/* 전체 화면 가운데 정렬 */
+.todo-container {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  padding: 20px;
+}
+
+/* 메인 카드 */
+.todo-card {
+  width: 100%;
+  max-width: 480px;
+
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 15px 40px rgba(80, 70, 130, 0.12);
+}
+
+/* 제목 영역 */
+.header {
+  margin-bottom: 25px;
+}
+
+.category {
+  display: inline-block;
+
+  color: #7964d8;
+  background: #f0edff;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  letter-spacing: 1px;
+}
+
+#title {
+  color: #292344;
+
+  font-size: 30px;
+
+  margin: 18px 0 8px;
+}
+
+#message {
+  color: #9993a8;
+
+  font-size: 14px;
+}
+
+/* 개수 표시 */
+.count-box {
+  display: flex;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+}
+
+.count-item {
+  flex: 1;
+
+  background: #f4f1ff;
+
+  padding: 18px;
+
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.completed-box {
+  background: #eaf8f0;
+}
+
+.count-number {
+  color: #6852c8;
+
+  font-size: 28px;
+
+  font-weight: bold;
+}
+
+.completed-box .count-number {
+  color: #269b66;
+}
+
+.count-label {
+  color: #89839b;
+
+  font-size: 13px;
+}
+
+/* 입력 영역 */
+.input-area {
+  display: flex;
+
+  gap: 10px;
+
+  margin-bottom: 30px;
+}
+
+#todoInput {
+  flex: 1;
+  min-width: 0;
+
+  padding: 14px;
+
+  border: 2px solid #eeeaf7;
+
+  border-radius: 12px;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+#todoInput:focus {
+  border-color: #8874df;
+}
+
+/* 추가 버튼 */
+#addButton {
+  width: 48px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #7964d8;
+
+  color: white;
+
+  font-size: 26px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+#addButton:hover {
+  background: #6651c5;
+}
+
+/* 목록 제목 */
+.list-title {
+  color: #39334f;
+
+  font-size: 18px;
+
+  margin-bottom: 15px;
+}
+
+/* 목록 */
+#todoList {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+/* 할 일 카드 */
+#todoList li {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 10px;
+
+  background: #faf9fd;
+
+  padding: 15px;
+
+  margin-bottom: 10px;
+
+  border: 1px solid #eeeaf5;
+
+  border-radius: 12px;
+
+  transition: 0.2s;
+}
+
+#todoList li:hover {
+  background: #f5f2ff;
+}
+
+/* 할 일 텍스트 */
+.todoText {
+  flex: 1;
+  min-width: 0;
+
+  color: #39334f;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  overflow-wrap: anywhere;
+}
+
+/* 완료 상태 */
+.completed {
+  text-decoration: line-through;
+
+  color: #aaa4b4;
+}
+
+/* 삭제 버튼 */
+.deleteBtn {
+  flex-shrink: 0;
+
+  background: #fff0f0;
+
+  color: #df7777;
+
+  border: none;
+
+  border-radius: 8px;
+
+  padding: 8px 12px;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.deleteBtn:hover {
+  background: #ffdddd;
+}
+
+/* 하단 문구 */
+.footer {
+  text-align: center;
+
+  color: #aaa4b4;
+
+  font-size: 12px;
+
+  margin-top: 30px;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 480px) {
+
+  .todo-container {
+    padding: 12px;
+
+    align-items: flex-start;
+  }
+
+  .todo-card {
+    padding: 24px 18px;
+
+    border-radius: 20px;
+  }
+
+  #title {
+    font-size: 25px;
+  }
+
+  .count-item {
+    padding: 14px;
+  }
+
+  .count-number {
+    font-size: 24px;
+  }
+
+}
